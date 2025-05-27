@@ -41,10 +41,14 @@
       height: 50px;
     }
 
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
     nav a {
       color: #00F3FF;
       text-decoration: none;
-      margin-left: 20px;
       font-weight: bold;
       transition: color 0.3s, transform 0.3s;
     }
@@ -52,6 +56,20 @@
     nav a:hover {
       color: #FF00FF;
       transform: scale(1.1);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background-color: #00F3FF;
+      border-radius: 2px;
     }
 
     .hero {
@@ -157,6 +175,27 @@
       color: #FF00FF;
     }
 
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 2em;
@@ -182,7 +221,12 @@
 
   <header>
     <img src="./img/logo.jpg" alt="Echoes Logo" />
-    <nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navbar">
       <a href="index.html">Home</a>
       <a href="updates.html">Updates</a>
       <a href="redeem.html">Redeem</a>
@@ -200,8 +244,7 @@
 
   <section class="trailer">
     <h2>Gameplay Trailer</h2>
-    
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Echoes Gameplay" allowfullscree ></iframe>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Echoes Gameplay" allowfullscreen></iframe>
   </section>
 
   <section class="screenshots">
@@ -225,6 +268,11 @@
   <!-- particles.js library -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navbar");
+      nav.classList.toggle("show");
+    }
+
     particlesJS('particles-js', {
       "particles": {
         "number": { "value": 80 },
