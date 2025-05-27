@@ -2,20 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Echoes Game</title>
     <style>
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
 
         @keyframes gradientFlow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
@@ -31,6 +58,9 @@
         }
 
         header {
+
+
+
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -88,6 +118,20 @@
             text-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
         }
 
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background-color: #00F3FF;
+            border-radius: 2px;
+        }
+
         main {
             flex: 1;
             max-width: 800px;
@@ -101,13 +145,6 @@
             transform: translateY(20px);
             opacity: 0;
             animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         h1 {
@@ -217,15 +254,32 @@
         }
 
         @media (max-width: 768px) {
-            header {
+            nav {
+                display: none;
                 flex-direction: column;
-                gap: 1rem;
+                background-color: #0D0D26;
                 padding: 1rem;
+                position: absolute;
+                top: 70px;
+                right: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px #00F3FF88;
             }
 
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
+            nav.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                position: relative;
             }
 
             main {
@@ -243,7 +297,12 @@
 <body>
     <header>
         <img src="./img/logo.jpg" alt="Game Logo">
-        <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="navbar">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="updates.html">Update</a>
@@ -255,7 +314,8 @@
 
     <main>
         <h1>Contact Us</h1>
-        <p>If you have any issues, suggestions, or queries related to Echoes, feel free to reach out. We'd love to hear from you!</p>
+        <p>If you have any issues, suggestions, or queries related to Echoes, feel free to reach out. We'd love to hear
+            from you!</p>
 
         <div class="contact-section">
             <div class="contact-item">
@@ -293,6 +353,12 @@
             <a href="docs.html">Documentation</a>
         </p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navbar').classList.toggle('show');
+        }
+    </script>
 </body>
 
 </html>
