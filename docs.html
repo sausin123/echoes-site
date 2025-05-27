@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Documentation - ECHOES</title>
   <style>
-    /* General Reset */
     * {
       margin: 0;
       padding: 0;
@@ -32,6 +31,7 @@
       padding: 15px 30px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
       animation: slideDown 1s ease;
+      position: relative;
     }
 
     @keyframes slideDown {
@@ -43,11 +43,14 @@
       height: 50px;
     }
 
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
     nav a {
       color: #00f3ff;
-      margin: 0 15px;
       text-decoration: none;
-      transition: all 0.3s ease;
       font-weight: bold;
     }
 
@@ -89,7 +92,6 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border: 1px solid rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(5px);
-      animation: fadeIn 1s ease forwards;
     }
 
     .doc-card:hover {
@@ -134,12 +136,55 @@
       color: #ff4081;
       text-shadow: 0 0 10px #ff4081;
     }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background-color: #00f3ff;
+      border-radius: 2px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        right: 30px;
+        background: #111122;
+        padding: 15px;
+        border-radius: 10px;
+        z-index: 1000;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="./img/logo.jpg" alt="ECHOES Logo">
-    <nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navbar">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact</a>
@@ -156,17 +201,14 @@
         <h2>Storyline Overview</h2>
         <p><a href="./docs/story line of ECHOES.pdf" target="_blank">📄 View PDF</a> | <a href="./docs/story line of ECHOES.pdf" download>⬇️ Download</a></p>
       </div>
-
       <div class="doc-card">
         <h2>Game Credits</h2>
         <p><a href="./docs/Echoes-credit.pdf" target="_blank">📄 View PDF</a> | <a href="./docs/Echoes-credit.pdf" download>⬇️ Download</a></p>
       </div>
-
       <div class="doc-card">
         <h2>Developer Log & Updates</h2>
         <p><a href="./docs/Echoes of the Past.pdf" target="_blank">📄 View PDF</a> | <a href="./docs/Echoes of the Past.pdf" download>⬇️ Download</a></p>
       </div>
-
       <div class="doc-card">
         <h2>More Coming Soon...</h2>
         <p>Stay tuned for more documentation and downloadable resources as we continue development!</p>
@@ -185,5 +227,12 @@
       <a href="docs.html">Documentation</a>
     </p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
