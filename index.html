@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Echoes - 2D Game</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0A0A1A;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: #00F3FF;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #FF00FF;
+      transform: scale(1.1);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px 80px;
+      background: linear-gradient(rgba(10,10,26,0.85), rgba(10,10,26,0.85)), url('./img/back.jpg') center/cover no-repeat;
+    }
+
+    .hero h1 {
+      font-size: 3.5em;
+      color: #00F3FF;
+      text-shadow: 0 0 20px #00F3FF;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00F3FF; }
+      to { text-shadow: 0 0 30px #00F3FF, 0 0 50px #00F3FF; }
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.2em;
+      animation: fadeIn 2s ease;
+    }
+
+    .cta-button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      background: linear-gradient(45deg, #00F3FF, #FF00FF);
+      border: none;
+      border-radius: 10px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .trailer {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .trailer iframe {
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+      border: 5px solid #00F3FF;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00F3FF;
+    }
+
+    .screenshots {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 60px 20px;
+      gap: 30px;
+    }
+
+    .screenshots img {
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00F3FF;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .screenshots img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 30px #FF00FF;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #00F3FF;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #FF00FF;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
+
+      .screenshots img {
+        width: 90%;
+      }
+
+      .trailer iframe {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="particles-js"></div>
+
+  <header>
+    <img src="./img/logo.jpg" alt="Echoes Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="updates.html">Updates</a>
+      <a href="redeem.html">Redeem</a>
+      <a href="docs.html">Documentation</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Echoes</h1>
+    <p>A 2D multiplayer game set in a fragmented digital world. Help restore the memory of the Prime Echo by collecting neural shards through intense gameplay and teamwork.</p>
+    <button class="cta-button">Download Now</button>
+  </section>
+
+  <section class="trailer">
+    <h2>Gameplay Trailer</h2>
+    
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Echoes Gameplay" allowfullscree ></iframe>
+  </section>
+
+  <section class="screenshots">
+    <img src="./img/screenshot1.jpg" alt="Game Screenshot 1" />
+    <img src="./img/screenshot2.jpg" alt="Game Screenshot 2" />
+    <img src="./img/screenshot3.jpg" alt="Game Screenshot 3" />
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Echoes Team</p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="updates.html">Updates</a> |
+      <a href="redeem.html">Redeem</a> |
+      <a href="docs.html">Documentation</a> |
+      <a href="about.html">About Us</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+
+  <!-- particles.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 80 },
+        "color": { "value": "#00F3FF" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#00F3FF",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>

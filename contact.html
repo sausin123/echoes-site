@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Echoes Game</title>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #0A0A1A, #1A1A40, #0D0D26, #001A33);
+            background-size: 400% 400%;
+            color: #f0f0f0;
+            animation: gradientFlow 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(13, 13, 38, 0.9);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        header img {
+            height: 50px;
+            filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4));
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00F3FF;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #00F3FF;
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+        }
+
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 40px rgba(0, 243, 255, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #00F3FF;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .contact-section {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background: rgba(0, 243, 255, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 243, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 243, 255, 0.2);
+            background: rgba(0, 243, 255, 0.1);
+        }
+
+        .contact-item strong {
+            color: #00F3FF;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            padding-left: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item a::before {
+            content: '✉️';
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #00F3FF;
+            padding-left: 2rem;
+        }
+
+        .contact-item a:hover::before {
+            opacity: 1;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        li:hover {
+            transform: translateX(10px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(13, 13, 38, 0.9);
+            border-top: 1px solid rgba(0, 243, 255, 0.2);
+            backdrop-filter: blur(10px);
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            background: rgba(0, 243, 255, 0.1);
+            color: #00F3FF;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            main {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="./img/logo.jpg" alt="Game Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="updates.html">Update</a>
+            <a href="redeem.html">Redeem</a>
+            <a href="contact.html">Contact</a>
+            <a href="docs.html">Documentation</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Us</h1>
+        <p>If you have any issues, suggestions, or queries related to Echoes, feel free to reach out. We'd love to hear from you!</p>
+
+        <div class="contact-section">
+            <div class="contact-item">
+                <strong>Official Email</strong>
+                <a href="mailto:info.echoesofpast@gmail.com">info.echoesofpast@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <strong>Developer Team</strong>
+                <ul>
+                    <li>
+                        <strong>Saugat Rauniyar</strong><br>
+                        Email & LinkedIn: <a href="about.html">View Profile</a>
+                    </li>
+                    <li>
+                        <strong>Prem Soni</strong><br>
+                        Email & LinkedIn: <a href="about.html">View Profile</a>
+                    </li>
+                    <li>
+                        <strong>Mohammad Zaid</strong><br>
+                        Email & LinkedIn: <a href="about.html">View Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Echoes Game Team. All rights reserved.</p>
+        <p>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="updates.html">Update</a>
+            <a href="redeem.html">Redeem</a>
+            <a href="contact.html">Contact</a>
+            <a href="docs.html">Documentation</a>
+        </p>
+    </footer>
+</body>
+
+</html>

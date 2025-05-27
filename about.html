@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - ECHOES</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0a0a1a, #1a1a2e);
+      color: #ffffff;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0a0a1a;
+      padding: 1em 2em;
+      box-shadow: 0 4px 6px rgba(0, 243, 255, 0.2);
+    }
+
+    nav img {
+      height: 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #00f3ff;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff0080;
+    }
+
+    .team {
+      text-align: center;
+      padding: 3em 1em;
+    }
+
+    .team h1 {
+      font-size: 2.5em;
+      color: #00f3ff;
+      margin-bottom: 1em;
+    }
+
+    .team-members {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    .member {
+      background: rgba(0, 243, 255, 0.08);
+      border: 1px solid #00f3ff33;
+      border-radius: 15px;
+      padding: 2em;
+      width: 270px;
+      box-shadow: 0 8px 25px rgba(0, 243, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 243, 255, 0.2);
+    }
+
+    .member img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 3px solid #00f3ff;
+      margin-bottom: 1em;
+    }
+
+    .member h2 {
+      margin-bottom: 0.5em;
+      color: #ffffff;
+    }
+
+    .member p {
+      font-size: 0.95em;
+      color: #cccccc;
+      margin: 0.3em 0;
+    }
+
+    .member a {
+      color: #00f3ff;
+      transition: color 0.3s ease;
+    }
+
+    .member a:hover {
+      color: #ff0080;
+    }
+
+    .note {
+      font-style: italic;
+      color: #aaaaaa;
+      margin-top: 1em;
+    }
+
+    .footer {
+      background-color: #0a0a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 1.5em;
+      margin-top: 3em;
+      border-top: 1px solid #00f3ff44;
+    }
+
+    .footer a {
+      color: #00f3ff;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      color: #ff0080;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <img src="./img/logo.jpg" alt="ECHOES Logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="docs.html">Documentation</a></li>
+      <li><a href="redeem.html">Redeem</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="updates.html">Updates</a></li>
+    </ul>
+  </nav>
+
+  <section class="team">
+    <h1><b>Meet the Developers</b></h1>
+    <div class="team-members">
+      <div class="member">
+        <img src="./img/saugat img.jpg" alt="Saugat Rauniyar">
+        <h2>Saugat Rauniyar</h2>
+        <p>Email: <a href="mailto:saugat.ds.ml@gmail.com">saugat.ds.ml@gmail.com</a></p>
+        <p>LinkedIn: <a href="http://www.linkedin.com/in/saugat-rauniyar-344542367" target="_blank">View Profile</a></p>
+        <p class="note">“Led the game development, handled all the documentation, developed the website, and curated the music for the game.”</p>
+      </div>
+
+      <div class="member">
+        <img src="./img/prem.jpg" alt="Prem Soni">
+        <h2>Prem Soni</h2>
+        <p>Email: <a href="mailto:premgopalsoni3@gmail.com">premgopalsoni3@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/prem-gopal-soni" target="_blank">View Profile</a></p>
+        <p class="note">“Oversaw development aspects of the project, helped with major coding contributions and logic handling.”</p>
+      </div>
+
+      <div class="member">
+        <img src="./img/zaid.jpg" alt="Mohammad Zaid">
+        <h2>Mohammad Zaid</h2>
+        <p>Email: <a href="mailto:japantoshiba399@gmail.com">japantoshiba399@gmail.com</a></p>
+        <p>LinkedIn: <em>To be added soon</em></p>
+        <p class="note">“Contributed key assets for the game’s visuals and animations, shaping the look and feel of the world of Echoes.”</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 ECHOES Game Team</p>
+    <div>
+      <a href="index.html">Home</a> |
+      <a href="updates.html">Updates</a> |
+      <a href="redeem.html">Redeem</a> |
+      <a href="docs.html">Documentation</a> |
+      <a href="about.html">About Us</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+</body>
+
+</html>

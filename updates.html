@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Echoes - Updates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0A0A1A, #1F1F3B);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      background-color: rgba(0, 0, 0, 0.85);
+      border-bottom: 2px solid #00F3FF44;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 50px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header img:hover {
+      transform: rotate(5deg) scale(1.05);
+    }
+
+    nav a {
+      margin-left: 1em;
+      text-decoration: none;
+      color: #ffffff;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background-color: #00F3FF;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #00F3FF;
+    }
+
+    main {
+      padding: 3em 1em;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00F3FF;
+      font-size: 2.5em;
+      margin-bottom: 2em;
+      animation: neon-glow 1.5s infinite alternate;
+    }
+
+    @keyframes neon-glow {
+      from {
+        text-shadow: 0 0 5px #00F3FF, 0 0 10px #00F3FF;
+      }
+      to {
+        text-shadow: 0 0 15px #00F3FF, 0 0 30px #00F3FF;
+      }
+    }
+
+    .update-box {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 1.5em;
+      margin-bottom: 2em;
+      border-left: 4px solid #00F3FF;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00F3FF55;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .update-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px #00F3FFAA;
+    }
+
+    .update-box h2 {
+      margin-top: 0;
+      color: #00F3FF;
+    }
+
+    .update-box ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #0D0D26;
+      text-align: center;
+      padding: 1.5em;
+      border-top: 2px solid #00F3FF33;
+      margin-top: 3em;
+    }
+
+    footer p {
+      margin: 0.5em 0;
+    }
+
+    footer a {
+      color: #00F3FF;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        margin: 0.5em;
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="Echoes Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="updates.html">Updates</a>
+      <a href="redeem.html">Redeem</a>
+      <a href="docs.html">Documentation</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 data-aos="fade-down">Game Updates</h1>
+
+    <div class="update-box" data-aos="fade-up" data-aos-delay="100">
+      <h2>v1.0 - Initial Launch</h2>
+      <p>Echoes is now live! Experience our first 5 chapters, play with up to 5 players, and explore the digital world of memory recovery. Featuring character abilities, bosses, and futuristic HUD!</p>
+    </div>
+
+    <div class="update-box" data-aos="fade-up" data-aos-delay="200">
+      <h2>Upcoming - v1.1</h2>
+      <p>We are currently working on improving the multiplayer experience, adding a chapter select menu, and fixing known bugs related to HUD positioning.</p>
+    </div>
+
+    <div class="update-box" data-aos="fade-up" data-aos-delay="300">
+      <h2>Future Roadmap</h2>
+      <ul>
+        <li>Chapter 6 - "Echoes of Resistance" - Coming Soon</li>
+        <li>New character with unique time-warp ability</li>
+        <li>Full gamepad support and key binding options</li>
+        <li>Expanded storyline and side quests</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Echoes Team. All rights reserved.</p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="updates.html">Updates</a> |
+      <a href="redeem.html">Redeem</a> |
+      <a href="docs.html">Documentation</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+
+  <!-- Animation on scroll library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+</body>
+</html>

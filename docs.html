@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documentation - ECHOES</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a0a1a, #1a1a2e);
+      color: #f0f0f0;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #111122;
+      padding: 15px 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      animation: slideDown 1s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: #00f3ff;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff4081;
+      text-shadow: 0 0 10px #ff4081;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00f3ff;
+      margin-bottom: 40px;
+      font-size: 2.8rem;
+      text-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+      animation: glowText 2s infinite alternate;
+    }
+
+    @keyframes glowText {
+      from { text-shadow: 0 0 10px #00f3ff; }
+      to { text-shadow: 0 0 25px #00f3ff, 0 0 40px #00f3ff; }
+    }
+
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .doc-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .doc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+    }
+
+    .doc-card h2 {
+      margin-bottom: 15px;
+      color: #00f3ff;
+    }
+
+    .doc-card a {
+      color: #00f3ff;
+      text-decoration: none;
+      margin-right: 10px;
+      font-weight: 600;
+    }
+
+    .doc-card a:hover {
+      color: #ff4081;
+      text-shadow: 0 0 5px #ff4081;
+    }
+
+    footer {
+      background: #111122;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid #333;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #00f3ff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      color: #ff4081;
+      text-shadow: 0 0 10px #ff4081;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="./img/logo.jpg" alt="ECHOES Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="redemm.html">Redemm</a>
+      <a href="updates.html">Update</a>
+      <a href="docs.html">Documentation</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Game Documentation</h1>
+    <div class="doc-grid">
+      <div class="doc-card">
+        <h2>Storyline Overview</h2>
+        <p><a href="./docs/story line of ECHOES.pdf" target="_blank">📄 View PDF</a> | <a href="./docs/story line of ECHOES.pdf" download>⬇️ Download</a></p>
+      </div>
+
+      <div class="doc-card">
+        <h2>Game Credits</h2>
+        <p><a href="./docs/Echoes-credit.pdf" target="_blank">📄 View PDF</a> | <a href="./docs/Echoes-credit.pdf" download>⬇️ Download</a></p>
+      </div>
+
+      <div class="doc-card">
+        <h2>Developer Log & Updates</h2>
+        <p><a href="./docs/Echoes of the Past.pdf" target="_blank">📄 View PDF</a> | <a href="./docs/Echoes of the Past.pdf" download>⬇️ Download</a></p>
+      </div>
+
+      <div class="doc-card">
+        <h2>More Coming Soon...</h2>
+        <p>Stay tuned for more documentation and downloadable resources as we continue development!</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ECHOES Game Project</p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="redemm.html">Redemm</a> |
+      <a href="update.html">Update</a> |
+      <a href="docs.html">Documentation</a>
+    </p>
+  </footer>
+</body>
+</html>

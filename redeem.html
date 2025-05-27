@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redeem - Echoes Game</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0A0A1A, #1A1A40);
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0D0D26;
+      padding: 10px 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00F3FF;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 20px;
+      box-shadow: 0 0 20px #00F3FF33;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      background: linear-gradient(90deg, #00F3FF, #FF00C8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.5rem;
+    }
+
+    p {
+      line-height: 1.7;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .redeem-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      padding: 14px;
+      border-radius: 12px;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+      background: #181832;
+      color: #fff;
+      box-shadow: inset 2px 2px 6px #00000080, inset -2px -2px 6px #1f1f3d;
+      transition: 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+      box-shadow: 0 0 8px #00F3FF;
+    }
+
+    button {
+      background: linear-gradient(90deg, #00F3FF, #FF00C8);
+      border: none;
+      padding: 14px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      color: #0A0A1A;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px #00F3FF55;
+    }
+
+    button:hover {
+      box-shadow: 0 0 20px #FF00C888, 0 0 40px #00F3FF88;
+      transform: scale(1.03);
+    }
+
+    .note {
+      margin-top: 30px;
+      color: #FF6666;
+      text-align: center;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      background-color: #0D0D26;
+      margin-top: 80px;
+      border-top: 2px solid #00F3FF55;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffffff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #00F3FF;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 8px 10px;
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="./img/logo.jpg" alt="Game Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="updates.html">Update</a>
+      <a href="redeem.html">Redeem</a>
+      <a href="contact.html">Contact</a>
+      <a href="docs.html">Documentation</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>🎁 Redeem Your Rewards</h1>
+    <p>Have a redeem code? Claim exclusive in-game rewards like coins, power-ups, and special skins! <br>Just enter your code and email below to receive your rewards instantly.</p>
+
+    <form class="redeem-form">
+      <input type="text" placeholder="Enter Redeem Code" required />
+      <input type="email" placeholder="Your Email Address" required />
+      <button type="submit">Redeem Now</button>
+    </form>
+
+    <p class="note">Note: Redeem codes are case-sensitive and can only be used once per player.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Echoes Game Team. All rights reserved.</p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="updates.html">Updates</a> |
+      <a href="redeem.html">Redeem</a> |
+      <a href="docs.html">Documentation</a> |
+      <a href="about.html">About Us</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+</body>
+
+</html>
