@@ -109,6 +109,8 @@
       cursor: pointer;
       transition: transform 0.3s;
       animation: fadeInUp 1s ease;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .cta-button:hover {
@@ -239,7 +241,14 @@
   <section class="hero">
     <h1>Welcome to Echoes</h1>
     <p>A 2D multiplayer game set in a fragmented digital world. Help restore the memory of the Prime Echo by collecting neural shards through intense gameplay and teamwork.</p>
-    <button class="cta-button">Download Now</button>
+    
+    
+
+    <!-- Option 2: Button with JS triggered download -->
+    <button class="cta-button" onclick="downloadInfo()">
+      Download Now
+    </button>
+
   </section>
 
   <section class="trailer">
@@ -306,6 +315,17 @@
       },
       "retina_detect": true
     });
+
+    // JS function to trigger download programmatically
+    function downloadInfo() {
+      const link = document.createElement('a');
+      link.href = './docs/Echoes-commingsoon.pdf';  // Path to your PDF
+      link.download = 'echoes-download-info.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   </script>
+
 </body>
 </html>
