@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - ECHOES</title>
-   <link rel="icon" type="image/png" href="./img/logo.jpg">
+  <link rel="icon" type="image/png" href="./img/logo.jpg">
   <style>
-    * {
+       * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -67,7 +67,6 @@
       border-radius: 2px;
     }
 
-    /* Team section */
     .team {
       text-align: center;
       padding: 3em 1em;
@@ -154,7 +153,6 @@
       color: #ff0080;
     }
 
-    /* Responsive styles */
     @media (max-width: 768px) {
       nav ul {
         display: none;
@@ -177,6 +175,123 @@
         display: flex;
       }
     }
+
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --primary: #38bdf8;
+      --accent: #7dd3fc;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+    }
+
+    .case-study-section {
+      background-color: var(--bg-color);
+      padding: 80px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      overflow: hidden;
+    }
+
+    .case-study-section .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .case-study-section h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .case-study-section h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: var(--accent);
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+
+    .case-study-section h3 {
+      font-size: 1.6rem;
+      margin-top: 40px;
+      color: var(--accent);
+    }
+
+    .case-study-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .case-study-section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 24px;
+    }
+
+    .case-study-section ul li {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      transition: color 0.3s ease;
+    }
+
+    .case-study-section ul li:hover {
+      color: var(--text);
+    }
+
+    .case-study-section a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .case-study-section a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0%;
+      height: 2px;
+      background-color: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .case-study-section a:hover {
+      color: var(--accent);
+    }
+
+    .case-study-section a:hover::after {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .case-study-section {
+        padding: 60px 15px;
+      }
+
+      .case-study-section h2 {
+        font-size: 2rem;
+      }
+
+      .case-study-section h3 {
+        font-size: 1.3rem;
+      }
+
+      .case-study-section p,
+      .case-study-section ul li {
+        font-size: 1rem;
+      }
+    }
+
   </style>
 </head>
 
@@ -206,7 +321,8 @@
         <h2>Saugat Rauniyar</h2>
         <p>Email: <a href="mailto:saugat.ds.ml@gmail.com">saugat.ds.ml@gmail.com</a></p>
         <p>LinkedIn: <a href="http://www.linkedin.com/in/saugat-rauniyar-344542367" target="_blank">View Profile</a></p>
-        <p class="note">“Led the game development, handled all the documentation, developed the website, and curated the music for the game.”</p>
+        <p class="note">“Led the game development, handled all the documentation, developed the website, and curated the
+          music for the game.”</p>
       </div>
 
       <div class="member">
@@ -214,17 +330,43 @@
         <h2>Prem Soni</h2>
         <p>Email: <a href="mailto:premgopalsoni3@gmail.com">premgopalsoni3@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/prem-gopal-soni" target="_blank">View Profile</a></p>
-        <p class="note">“Oversaw development aspects of the project, helped with major coding contributions and logic handling.”</p>
+        <p class="note">“Oversaw development aspects of the project, helped with major coding contributions and logic
+          handling.”</p>
       </div>
 
-      
+
       <div class="member">
         <img src="zaid.jpg" alt="Mohammad Zaid">
         <h2>Mohammad Zaid</h2>
         <p>Email: <a href="mailto:japantoshiba399@gmail.com">japantoshiba399@gmail.com</a></p>
         <p>LinkedIn: <em>To be added soon</em></p>
-        <p class="note">“Contributed key assets for the game’s visuals and animations, shaping the look and feel of the world of Echoes.”</p>
+        <p class="note">“Contributed key assets for the game’s visuals and animations, shaping the look and feel of the
+          world of Echoes.”</p>
       </div>
+    </div>
+  </section>
+ <section id="case-study" class="case-study-section">
+    <div class="container" data-aos="fade-up">
+      <h2>Project Case Study: Echoes</h2>
+      <p><strong>Role:</strong> Game Developer, UI/UX Designer</p>
+      <p><strong>Tech Stack:</strong> HTML5, JavaScript, Firebase, CSS Animations, WebSocket</p>
+
+      <h3 data-aos="fade-up">Overview</h3>
+      <p data-aos="fade-up" data-aos-delay="100">Echoes is a 2D multiplayer game...</p>
+
+      <h3 data-aos="fade-up">Features</h3>
+      <ul data-aos="fade-up">
+        <li>Multiplayer synchronization using Firebase</li>
+        <!-- More features -->
+      </ul>
+
+      <h3 data-aos="fade-up">Challenges & Solutions</h3>
+      <ul data-aos="fade-up">
+        <li><strong>Challenge:</strong> Smooth player movement...</li>
+      </ul>
+
+      <h3 data-aos="fade-up">GitHub & Live Demo</h3>
+      <p data-aos="fade-up"><a href="https://github.com/sausin123">View Code</a> | <a href="https://github.com/sausin123">Play Demo</a></p>
     </div>
   </section>
 
