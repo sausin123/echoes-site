@@ -199,6 +199,78 @@
         display: flex;
       }
     }
+    .case-study-section {
+  background-color: #f7f9fc;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.case-study-section .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.case-study-section h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.case-study-section h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-top: 30px;
+}
+
+.case-study-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.case-study-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
+.case-study-section ul li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.case-study-section a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.case-study-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .case-study-section {
+    padding: 40px 15px;
+  }
+
+  .case-study-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .case-study-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .case-study-section p,
+  .case-study-section ul li {
+    font-size: 1rem;
+  }
+}
+
 
     @media (max-width: 600px) {
       .hero h1 {
@@ -257,6 +329,34 @@
     <h2>Gameplay Trailer</h2>
    <iframe width="560" height="315" src="https://www.youtube.com/embed/N1UjoQ56xGE?si=vTaDHPT0FjKNFMkj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </section>
+  <section id="case-study" class="case-study-section">
+  <div class="container">
+    <h2>Project Case Study: Echoes</h2>
+    <p><strong>Role:</strong> Game Developer, UI/UX Designer</p>
+    <p><strong>Tech Stack:</strong> HTML5, JavaScript, Firebase, CSS Animations, WebSocket</p>
+
+    <h3>Overview</h3>
+    <p>Echoes is a 2D multiplayer game that combines real-time gameplay with a strategic twist. The game allows players to explore, interact, and compete in a pixel-art environment rendered entirely in the browser.</p>
+
+    <h3>Features</h3>
+    <ul>
+      <li>Multiplayer synchronization using Firebase Realtime Database</li>
+      <li>Custom movement animations and sprite transitions</li>
+      <li>Responsive UI for desktop and mobile</li>
+      <li>State management for inventory and player health</li>
+    </ul>
+
+    <h3>Challenges & Solutions</h3>
+    <ul>
+      <li><strong>Challenge:</strong> Smooth player movement across devices<br><strong>Solution:</strong> Built a lightweight frame buffer system and optimized network latency</li>
+      <li><strong>Challenge:</strong> Real-time interaction conflicts<br><strong>Solution:</strong> Implemented conflict resolution logic in the backend using Firebase rules</li>
+    </ul>
+
+    <h3>GitHub & Live Demo</h3>
+    <p><a href="https://github.com/yourusername/echoes">View Code on GitHub</a> | <a href="https://sausin123.github.io/echoes-site/">Play Demo</a></p>
+  </div>
+</section>
+
 
   <section class="screenshots">
     <img src="./img/sheet1.png" alt="Game Screenshot 1" />
