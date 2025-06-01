@@ -24,25 +24,40 @@
       to { opacity: 1; }
     }
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #111122;
-      padding: 15px 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-      animation: slideDown 1s ease;
-      position: relative;
-    }
+    
 
     @keyframes slideDown {
       from { transform: translateY(-100%); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
 
-    header img {
-      height: 50px;
-    }
+    header {
+
+
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(13, 13, 38, 0.9);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        header img {
+            height: 50px;
+            filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4));
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
 
     nav {
       display: flex;
