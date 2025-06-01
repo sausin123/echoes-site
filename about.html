@@ -34,9 +34,33 @@
       position: relative;
     }
 
-    nav img {
-      height: 40px;
-    }
+     nav {
+
+
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(13, 13, 38, 0.9);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        nav img {
+            height: 50px;
+            filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4));
+            transition: transform 0.3s ease;
+        }
+
+        nav img:hover {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
 
     nav ul {
       list-style: none;
